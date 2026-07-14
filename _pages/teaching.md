@@ -1,15 +1,17 @@
 ---
 layout: page
 permalink: /teaching/
-title: teaching
-description: Course materials, schedules, and resources for classes taught.
+title: Teaching
+description: I really love teaching! As a result, I have been involved in several courses since graduating myself.
 nav: true
-nav_order: 6
+nav_order: 4
 calendar: true
 ---
 
-This page displays a collection of courses with detailed schedules, materials, and resources. You can organize your courses by years, terms, or topics.
+## Informatica
+*Bachelor course for engineering students, Ghent University, 2024-present*\
+Leading lab sessions about Python and providing one-on-one assistance for exercises
 
-{% include calendar.liquid calendar_id='test@gmail.com' timezone='Asia/Shanghai' %}
-
-{% include courses.liquid %}
+## Data-driven design
+*Elective master course for architectural engineering students, Ghent University, 2023-2024*\
+Teaching Python classes in the first semester, and guiding a project on compliance checking in the second semester
