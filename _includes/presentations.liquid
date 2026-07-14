@@ -1,0 +1,47 @@
+<div class="presentations">
+  {% if site.data.presentations and site.data.presentations.size > 0 %}
+    <div class="table-responsive">
+      <table class="table table-sm table-borderless">
+        {% assign presentations = site.data.presentations | sort: 'date' | reverse %}
+        {% for item in presentations %}
+          <tr>
+            <th scope="row" style="width: 20%">{{ item.date | date: '%b %d, %Y' }}</th>
+            <td>
+              <div class="title"><strong>{{ item.title }}</strong></div>
+              {% if item.venue or item.location %}
+                <div class="periodical">{% if item.venue %}<em>{{ item.venue }}</em>{% endif %}{% if item.location %}{% if item.venue %}, {% endif %}{{ item.location }}{% endif %}</div>
+              {% endif %}
+              {% if item.description %}
+                <div class="description">{{ item.description | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+              {% endif %}
+              <div class="links">
+                {% if item.slides %}
+                  {% if item.slides contains '://' or item.slides contains '/' %}
+                    <a href="{{ item.slides }}" class="btn btn-sm z-depth-0" role="button">Slides</a>
+                  {% else %}
+                    <a href="{{ item.slides | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Slides</a>
+                  {% endif %}
+                {% endif %}
+                {% if item.video %}
+                  <a href="{{ item.video }}" class="btn btn-sm z-depth-0" role="button">Video</a>
+                {% endif %}
+                {% if item.website %}
+                  <a href="{{ item.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>
+                {% endif %}
+                {% if item.pdf %}
+                  {% if item.pdf contains '://' or item.pdf contains '/' %}
+                    <a href="{{ item.pdf }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
+                  {% else %}
+                    <a href="{{ item.pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
+                  {% endif %}
+                {% endif %}
+              </div>
+            </td>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+  {% else %}
+    <p>No presentations yet.</p>
+  {% endif %}
+</div>
