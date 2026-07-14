@@ -67,21 +67,11 @@
       "url": "https://persruimte.stad.gent/224236-emma-wint-inclu-scriptieprijs-met-toepassing-die-bouwplannen-controleert-op-toegankelijkheid"
     }
   ],
-  "languages": [
+  "acquired funding": [
     {
-      "language": "Dutch",
-      "fluency": "Native speaker",
-      "icon": ""
-    },
-    {
-      "language": "English",
-      "fluency": "Fluent",
-      "icon": ""
-    },
-    {
-      "language": "French",
-      "fluency": "Basic understanding",
-      "icon": ""
+      "title": "FWO Travel Grant for a long stay abroad",
+      "year": "2026",
+      "description": "FWO, Belgium. Author and grantee for a funded 3-month stay at TU/e."
     }
   ]
 }
